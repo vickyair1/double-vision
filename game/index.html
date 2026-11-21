@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Double Vision — a spot-the-difference hunt</title>
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #0b0f18;
+    height: 100%;
+  }
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  #game {
+    display: block;
+    width: min(1280px, 100vw);
+    height: auto;
+    aspect-ratio: 16 / 9;
+    cursor: crosshair;
+    background: #101623;
+  }
+  #error {
+    position: fixed;
+    left: 8px;
+    bottom: 8px;
+    color: #ef5350;
+    font-size: 13px;
+    white-space: pre-wrap;
+  }
+</style>
+</head>
+<body>
+<canvas id="game" width="1280" height="720"></canvas>
+<div id="error"></div>
+<script type="module" src="src/main.js"></script>
+</body>
+</html>
